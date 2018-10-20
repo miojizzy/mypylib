@@ -16,12 +16,12 @@ def fileiter(filename, num=1):
 	count = 0
 	with open(filename,'r') as f:
 		for line in f:
-		tmp_vec.append(line.strip())
-		count+=1
-		if count%num == 0:
-			ret = tmp_vec
-			tmp_vec = []
-			yield ret
+			tmp_vec.append(line.strip())
+			count+=1
+			if count%num == 0:
+				ret = tmp_vec
+				tmp_vec = []
+				yield ret
 	if len(tmp_vec)>0:
 		yield tmp_vec
 
