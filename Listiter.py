@@ -1,10 +1,16 @@
-def listiter(param_vec, num=1):
+import math
+def listiter(param_vec, num=1, mode="line"):
+	each_count = num
+	if mode == "split":
+		each_count = math.ceil(len(param_vec)*1.0 / num)
+	if each_count < 1:
+		return
 	tmp_vec = []
 	count = 0
 	for item in param_vec:
 		tmp_vec.append(item)
 		count+=1
-		if count%num == 0:
+		if count%each_count == 0:
 			ret = tmp_vec
 			tmp_vec = []
 			yield ret
@@ -47,8 +53,5 @@ def filedataiter(filename,title):
 					continue
 	if len(tmp_vec) > 0:
 		yield tmp_vec
-
-
-
 
 
