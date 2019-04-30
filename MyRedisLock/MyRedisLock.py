@@ -4,7 +4,8 @@ import redis
 import time
 import uuid
 import sys
-sys.path.append("../Singleton")
+import os
+sys.path.append( os.path.dirname(__file__) + "/../Singleton")
 from Singleton import singleton
 
 
