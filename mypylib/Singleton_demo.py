@@ -1,4 +1,4 @@
-#!/usr/bin/python27
+#!/usr/bin/python
 # -*- coding-utf8 -*-
 
 print "py start"

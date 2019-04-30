@@ -1,3 +1,4 @@
+# -*- coding-utf8 -*-
 class singleton(object):
 	def __init__(self, cls):
 		self._cls = cls
@@ -6,9 +7,3 @@ class singleton(object):
 		if not self._instances:
 			self._instances = self._cls(*args)
 		return self._instances
-
-
-
-
-
-
